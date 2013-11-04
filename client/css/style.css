@@ -1,0 +1,43 @@
+@import url(magnific.css);
+body.hamLogin {
+  min-height: 438px;
+  background-image: url("../img/hammock.png");
+  background-position: center;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    body.hamLogin {
+      background-image: url("../img/hammock@2x.png");
+      -webkit-background-size: 437.5px 348.5px; } }
+
+.contain-login {
+  margin: auto;
+  padding-top: 220px;
+  text-align: center;
+  width: 180px; }
+  .contain-login input, .contain-login button {
+    margin: auto;
+    width: 90%; }
+  .contain-login input {
+    margin-bottom: 5px; }
+  .contain-login button {
+    margin-top: 10px; }
+
+.contain-signup {
+  margin: auto;
+  padding-top: 220px;
+  text-align: center;
+  width: 180px; }
+  .contain-signup input, .contain-signup button {
+    margin: auto;
+    width: 42%; }
+  .contain-signup input {
+    margin-bottom: 5px; }
+    .contain-signup input.left {
+      margin-left: 5px; }
+    .contain-signup input.right {
+      margin-right: 5px; }
+  .contain-signup button.right {
+    margin-right: 5px;
+    height: 18px;
+    line-height: 100%;
+    width: 43%; }

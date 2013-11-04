@@ -1,0 +1,84 @@
+@import "normalize";
+//fix box border sizing
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+@import "mixins";
+body {
+  background-color: #f7f7f7;
+}
+input,button {
+  color: #bcbcbc;
+  font-size: .8em;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #e4e5e5;
+  &:hover,&:focus {
+    color: #a6a6a6;
+  }
+}
+input {
+  &.invalid {
+    border: 2px solid #e58586;
+  }
+}
+button {
+  background: #e4e5e5;
+  margin-top: 10px;
+}
+a {
+  color: #406fcc;
+  &:hover {
+    color: #4178d6;
+  }
+}
+.hide {
+  display: none;
+}
+//ajax loader
+@keyframes loadIndicatorScroll {
+  from { background-position: 0 0; }
+  to { background-position: 27000px 0; }
+}
+@-webkit-keyframes loadIndicatorScroll {
+  from { background-position: 0 0; }
+  to { background-position: 27000px 0; }
+}
+@-moz-keyframes loadIndicatorScroll {
+  from { background-position: 0 0; }
+  to { background-position: 27000px 0; }
+}
+#loadIndicator {
+  opacity: 0;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  z-index: 301;
+  top: 0px;
+  left: 0px;
+  @include background-image-retina('../img/loader', 'png', 45px, 3px);
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+
+  animation: loadIndicatorScroll 400s linear infinite;;
+  -webkit-animation: loadIndicatorScroll 400s linear infinite;;
+}
+//clearfix
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}

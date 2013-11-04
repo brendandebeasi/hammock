@@ -1,0 +1,26 @@
+@mixin background-image-retina($file, $type, $width, $height) {
+  background-image: url($file + '.' + $type);
+
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    & {
+      background-image: url($file + '@2x.' + $type);
+      -webkit-background-size: $width $height;
+    }
+  }
+}
+@mixin enable-text-selection() {
+  -webkit-touch-callout: #78a6d5;
+  -webkit-user-select: #78a6d5;
+  -khtml-user-select: #78a6d5;
+  -moz-user-select: #78a6d5;
+  -ms-user-select: #78a6d5;
+  user-select: #78a6d5;
+}
+@mixin disable-text-selection() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

@@ -1,0 +1,27 @@
+.contain-signup {
+  margin: auto;
+  padding-top: 220px;
+  text-align: center;
+  width: 180px;
+  input,button {
+    margin: auto;
+    width: 42%
+  }
+  input {
+    margin-bottom: 5px;
+    &.left {
+      margin-left: 5px;
+    }
+    &.right {
+      margin-right: 5px;
+    }
+  }
+  button {
+    &.right {
+      margin-right: 5px;
+      height: 18px;
+      line-height: 100%;
+      width: 43%;
+    }
+  }
+}
